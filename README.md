@@ -1,66 +1,112 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Real Estate Inventory Management API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Welcome to the **Real Estate Inventory Management API** project! This application is built using **PHP** and **Laravel** and serves as a REST API to manage the inventory of real estate properties. It allows users to create, search, and manage property listings for an imaginary real estate agency.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Table of Contents
+1. [Features](#features)
+2. [Requirements](#requirements)
+3. [Setup Instructions](#setup-instructions)
+4. [Usage](#usage)
+5. [Potential Backlog Improvements](#potential-backlog-improvements)
+6. [License](#license)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Features
 
-## Learning Laravel
+### Functional
+- **Create Real Estate Properties**  
+  - Add properties with details such as type (House/Apartment), address, size, number of bedrooms, geolocation, and price.
+  
+- **Search Properties**  
+  - Search for properties based on:
+    - Type
+    - Address
+    - Size
+    - Number of Bedrooms
+    - Price
+    - Geographical Search: Retrieve all properties within a specified radius from a geographical point (latitude/longitude).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Technical
+- Built with **Laravel**, leveraging its robust features for REST API development.
+- Utilizes a relational database (e.g., MySQL or PostgreSQL) for managing property data.
+- Follows best practices for API design and database interactions.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Requirements
 
-## Laravel Sponsors
+- **PHP** >= 8.1
+- **Composer**
+- **Laravel Framework** >= 10.x
+- Relational Database (e.g., MySQL or PostgreSQL)
+- **Git**
+- **axios** 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+---
 
-### Premium Partners
+## Setup Instructions
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-username/real-estate-api.git
+   cd real-estate-api
+2. **Install Dependencies**
+    composer install
+3. **Update .env**
+4. **Run Database Migrations**
+    php artisan migrate
+5. **Start the Development Server**
+    php artisan serve
+5. **The application should now be accessible at** 
+     http://127.0.0.1:8000/properties 
 
-## Contributing
+## Endpoints
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **Endpoint**: `GET /properties`
+ Retrieves a list of all properties in the inventory.
 
-## Code of Conduct
+- **Endpoint**: `POST /properties`
+ Adds a new property to the inventory.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **Endpoint**: `GET /properties/search`
+ Searches for properties based on specific criteria.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Features
 
-## License
+### Potential Backlog Improvements
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. **Google Maps Integration**
+   - Add a feature to display property locations on a Google Map based on their latitude and longitude.  
+   - This enhancement would provide a visual representation of the properties' geographical locations, making it easier for users to understand their proximity to specific areas.
+
+2. **Authentication and Authorization**
+   - Implement user roles (e.g., Admin, Agent) for secure access.
+
+3. **Property Media Support**
+   - Allow uploading images or videos for each property listing.
+
+4. **Reservation System**
+   - Add the ability for users to reserve properties
+
+
+### Notes
+
+1. **Default Laravel Files**
+   - The project includes the default Laravel boilerplate files to give you flexibility in personalizing the application.  
+   - Feel free to modify or extend the existing structure as per your requirements.
+
+2. **Axios for Property Creation**
+   - I used **Axios** for creating new properties directly through API calls in the application.  
+   - However, you can customize this functionality by directing users to a dedicated form page for property creation, providing a more user-friendly interface if needed.
+
+3. **Radius and Geolocation Precision**
+   - The **radius** for geographical searches is specified in kilometers (km).  
+   - The **latitude** and **longitude** values are stored as decimal values with a precision of `(7,10)` to ensure accurate positioning.  
+   - For example:
+     - A radius of `5 km` corresponds to a `0.0005` difference in latitude or longitude.  
+     - This precision ensures that the geospatial calculations are accurate and reliable for small-scale searches.
