@@ -8,9 +8,9 @@ Welcome to the **Real Estate Inventory Management API** project! This applicatio
 1. [Features](#features)
 2. [Requirements](#requirements)
 3. [Setup Instructions](#setup-instructions)
-4. [Usage](#usage)
-5. [Potential Backlog Improvements](#potential-backlog-improvements)
-6. [License](#license)
+4. [Endpoints](#Endpoints)
+5. [Notes](#Notes)
+
 
 ---
 
@@ -76,7 +76,7 @@ Welcome to the **Real Estate Inventory Management API** project! This applicatio
 
 ---
 
-## Features
+## Notes
 
 ### Potential Backlog Improvements
 
@@ -94,7 +94,7 @@ Welcome to the **Real Estate Inventory Management API** project! This applicatio
    - Add the ability for users to reserve properties
 
 
-### Notes
+### Personalization Note
 
 1. **Default Laravel Files**
    - The project includes the default Laravel boilerplate files to give you flexibility in personalizing the application.  
